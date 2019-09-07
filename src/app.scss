@@ -283,6 +283,7 @@
          display: -webkit-box;
          display: -ms-flexbox;
          display: flex;
+         outline: none;
          -webkit-box-align: center;
              -ms-flex-align: center;
                  align-items: center;
@@ -351,10 +352,20 @@
        border-bottom: $generic-border;
        padding-left: 10px;
        cursor: pointer;
+       outline: none;
+      
+       div:nth-child(1) {
+         &.active, &:hover {
+          font-weight: bold;
+          background-color: white;
+
+        }
+       }
    
        span {
          color: #0000008a;
          margin-right: 10px;
+         
    
          svg.hidden-projects {
            -webkit-transform: rotate(-90deg);
@@ -411,6 +422,9 @@
          &.active, &:hover {
            font-weight: bold;
            background-color: white;
+           :focus {
+             outline: none;
+           }
          }
        }
      }
