@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
+import { FiLogIn } from 'react-icons/fi'
 import PropTypes from 'prop-types';
 import { AddTask } from '../AddTask';
 
 export const Header = ({ darkMode, setDarkMode }) => {
   const [shouldShowMain, setShouldShowMain] = useState(false);
   const [showQuickAddTask, setShowQuickAddTask] = useState(false);
+  const [showLogin, setShowLogin] = useState(false)
 
   return (
     <header className="header" data-testid="header">
@@ -41,6 +43,17 @@ export const Header = ({ darkMode, setDarkMode }) => {
                 onKeyDown={() => setDarkMode(!darkMode)}
               >
                 <FaPizzaSlice />
+              </button>
+            </li>
+            <li className="settings__auth">
+              <button
+                data-testid="dark-mode-action"
+                aria-label="Darkmode on/off"
+                type="button"
+                onClick={() => setDarkMode(!darkMode)}
+                onKeyDown={() => setDarkMode(!darkMode)}
+              >
+                <FiLogIn />
               </button>
             </li>
           </ul>

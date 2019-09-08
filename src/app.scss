@@ -239,8 +239,27 @@
                    height: 20px;
                  }
                }
-   
              }
+
+             &.settings__auth {
+              margin-left: 10px;
+              
+              button {
+                @include transparent-button();
+                color: white;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+  
+                svg {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+
+
            }
          }
        }
@@ -565,7 +584,7 @@
    
          overflow: visible;
          margin-bottom: 20px;
-         margin-top: 55px;
+        //  margin-top: 55px;
          border-radius: 5px;
          background-color: white;
          position: absolute;
@@ -623,6 +642,7 @@
    
      &__cancel {
        @include cancel();
+       outline: none;
      }
    
      &__submit {
@@ -634,6 +654,7 @@
      @include no-select;
      cursor: pointer;
      margin-bottom: 20px;
+     outline: none;
    }
    
    .add-task__plus, .add-project__plus {
@@ -646,6 +667,7 @@
      color: #545454;
      font-size: 14px;
      margin-left: 15px;
+     outline: none;
    }
    
    /* Task Date
@@ -730,5 +752,6 @@
    
      &__cancel {
        @include cancel();
+       outline: none;
      }
    }
