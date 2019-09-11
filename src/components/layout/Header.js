@@ -3,6 +3,7 @@ import { FaPizzaSlice } from 'react-icons/fa';
 import { FiLogIn } from 'react-icons/fi'
 import PropTypes from 'prop-types';
 import { AddTask } from '../AddTask';
+import { Auth } from '../Auth';
 
 export const Header = ({ darkMode, setDarkMode }) => {
   const [shouldShowMain, setShouldShowMain] = useState(false);
@@ -50,8 +51,8 @@ export const Header = ({ darkMode, setDarkMode }) => {
                 data-testid="dark-mode-action"
                 aria-label="Darkmode on/off"
                 type="button"
-                onClick={() => setDarkMode(!darkMode)}
-                onKeyDown={() => setDarkMode(!darkMode)}
+                onClick={() => setShowLogin(true)}
+                onKeyDown={() => setShowLogin(true)}
               >
                 <FiLogIn />
               </button>
@@ -66,6 +67,12 @@ export const Header = ({ darkMode, setDarkMode }) => {
         showQuickAddTask={showQuickAddTask}
         setShowQuickAddTask={setShowQuickAddTask}
       />
+
+      <Auth
+        showLogin={showLogin}
+        setShowLogin={setShowLogin}
+      />
+      
     </header>
   );
 };

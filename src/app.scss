@@ -605,8 +605,7 @@
          cursor: pointer;
          color: gray;
          float: right;
-         font-weight: bold;
-         font-size: 12px;
+         font-size: 20px;
          margin-top: 10px;
        }
      }
@@ -724,6 +723,136 @@
        }
      }
    }
+
+   /* Login Sign Up Form
+     ============================================ */
+     .login-signup {
+      &__overlay {
+        background: rgba(102,102,102,0.5);
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+        -webkit-transition: opacity 0.2s ease-in;
+        transition: opacity 0.2s ease-in;
+        height: calc(100vh);
+    
+        .login-signup__main {
+          @include mq('900px') {
+            width: 90%;
+          }
+
+          overflow: visible;
+          margin-bottom: 20px;
+         //  margin-top: 55px;
+          border-radius: 5px;
+          background-color: white;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          padding: 20px 30px;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+    
+          .header {
+            margin-bottom: 20px;
+            float: left;
+          }
+        }
+
+        hr {
+          margin: 1em 0;
+          padding: 0;
+          border: 0;
+          color: #ddd;
+          background-color: #ddd;
+          height: 1px;
+        }
+    
+        .login-signup__cancel-x {
+          cursor: pointer;
+          color: gray;
+          float: right;
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .login_details {
+          margin-top: 80px;
+
+          .login-signup__label {
+            display: block;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 5px;
+          }
+        }
+
+        
+      }
+    
+      &__main {
+        position: relative;
+      }
+    
+      &__project, &__date {
+        cursor: pointer;
+        float: right;
+        color: gray;
+        margin: 20px 10px;
+      }
+    
+      &__project {
+        margin-right: 0;
+      }
+    
+      &__content {
+        width: 30rem;
+        border: 1px solid #ddd;
+        background-color: white !important;
+        border-radius: 3px;
+        height: 35px;
+        padding: 20px;
+        margin-bottom: 10px;
+
+      }
+    
+      &__cancel, &__submit {
+        @include no-select;
+      }
+    
+      &__cancel {
+        @include cancel();
+        outline: none;
+      }
+    
+      &__submit {
+        @include btn(100%);
+      }
+    }
+    
+    .login-signup__shallow, .add-project {
+      @include no-select;
+      cursor: pointer;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    
+    .login-signup__plus, .add-project__plus {
+      color: #dd4b39;
+      font-size: 18px;
+    }
+    
+    .login-signup__text, .add-project__text {
+      display: inline-block;
+      color: #545454;
+      font-size: 14px;
+      margin-left: 15px;
+      outline: none;
+    }
    
    /* Add Project
      ============================================ */
